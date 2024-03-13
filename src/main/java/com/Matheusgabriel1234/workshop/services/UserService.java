@@ -38,5 +38,11 @@ public class UserService {
 		return new Users(obj.getId(),obj.getNome(),obj.getEmail());
 		
 	}
+	
+	public void delete(String id) {
+		findById(id);
+		repo.deleteById(id);;
+		
+	}
 
 }
