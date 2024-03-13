@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.Matheusgabriel1234.workshop.domain.Users;
+import com.Matheusgabriel1234.workshop.dto.UserDto;
 import com.Matheusgabriel1234.workshop.repository.UserRepository;
 import com.Matheusgabriel1234.workshop.services.exception.ObjectNotFoundException;
 
@@ -25,6 +26,16 @@ public class UserService {
 		}
 		return user;
 		
+		
+	}
+	
+	public Users insert(Users obj) {
+		return repo.insert(obj);
+		
+	}
+	
+	public Users fromDto(UserDto obj) {
+		return new Users(obj.getId(),obj.getNome(),obj.getEmail());
 		
 	}
 
