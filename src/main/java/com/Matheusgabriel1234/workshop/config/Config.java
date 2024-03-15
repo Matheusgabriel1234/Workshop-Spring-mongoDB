@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.Matheusgabriel1234.workshop.domain.Post;
 import com.Matheusgabriel1234.workshop.domain.Users;
+import com.Matheusgabriel1234.workshop.dto.AutorDto;
 import com.Matheusgabriel1234.workshop.repository.PostRepository;
 import com.Matheusgabriel1234.workshop.repository.UserRepository;
 
@@ -35,9 +36,11 @@ public class Config implements CommandLineRunner {
 		Users eduarda = new Users(null,"Eduarda Cecato","eduarda@gmail.com");
 		Users luiza = new Users(null,"Luiza Grando","luiza@gmail.com");
 		Users everton = new Users(null,"Everton Cecato","everton@gmail.com");
-		Post post1 = new Post(null,sdf.parse("21/03/2018"),"Partiu viagem","Vou viajar para SC abraços",luiza);
-		Post post2 = new Post(null,sdf.parse("21/03/2018"),"Partiu viagem","Vou viajar para o RJ abraços",eduarda);
 		repo.saveAll(Arrays.asList(eduarda,luiza,everton));
+		
+		Post post1 = new Post(null,sdf.parse("21/03/2018"),"Partiu viagem","Vou viajar para SC abraços",new AutorDto(luiza));
+		Post post2 = new Post(null,sdf.parse("21/03/2018"),"Partiu viagem","Vou viajar para o RJ abraços",new AutorDto(eduarda));
+		;
 		postRepo.saveAll(Arrays.asList(post1,post2));
 	}
 	
