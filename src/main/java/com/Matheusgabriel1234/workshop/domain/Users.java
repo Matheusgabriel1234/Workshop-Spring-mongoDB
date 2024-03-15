@@ -2,9 +2,12 @@ package com.Matheusgabriel1234.workshop.domain;
 
 
 	import java.io.Serializable;
-	import java.util.Objects;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
   @Document(collection= "User" )
   
@@ -20,6 +23,21 @@ import org.springframework.data.mongodb.core.mapping.Document;
 	private String id;
 	private String nome;
 	private String email;
+	
+	@DBRef(lazy=true)
+	private List<Post> list = new ArrayList<>();
+	
+	
+	
+	
+	
+	
+	public List<Post> getList() {
+		return list;
+	}
+	public void setList(List<Post> list) {
+		this.list = list;
+	}
 	public String getId() {
 		return id;
 	}
