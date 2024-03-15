@@ -43,9 +43,9 @@ public class Config implements CommandLineRunner {
 		;
 		postRepo.saveAll(Arrays.asList(post1,post2));
 		
-		eduarda.getList().addAll(Arrays.asList(post2));
+		eduarda.getPost().addAll(Arrays.asList(post2));
 
-		luiza.getList().addAll(Arrays.asList(post1));
+		luiza.getPost().addAll(Arrays.asList(post1));
 		
 		repo.saveAll(Arrays.asList(eduarda,luiza));
 		

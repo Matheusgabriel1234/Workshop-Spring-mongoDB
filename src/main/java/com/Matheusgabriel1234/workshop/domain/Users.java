@@ -25,18 +25,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 	private String email;
 	
 	@DBRef(lazy=true)
-	private List<Post> list = new ArrayList<>();
+	private List<Post> post= new ArrayList<>();
 	
 	
 	
 	
 	
 	
-	public List<Post> getList() {
-		return list;
+	public List<Post> getPost() {
+		return post;
 	}
-	public void setList(List<Post> list) {
-		this.list = list;
+	public void setPost(List<Post> post) {
+		this.post = post;
 	}
 	public String getId() {
 		return id;
