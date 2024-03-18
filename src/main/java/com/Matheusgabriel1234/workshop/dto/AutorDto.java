@@ -2,7 +2,6 @@ package com.Matheusgabriel1234.workshop.dto;
 
 import java.io.Serializable;
 
-import com.Matheusgabriel1234.workshop.domain.Post;
 import com.Matheusgabriel1234.workshop.domain.Users;
 
 public class AutorDto implements Serializable {
