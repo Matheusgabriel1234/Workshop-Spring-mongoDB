@@ -39,8 +39,8 @@ public class Config implements CommandLineRunner {
 		Users everton = new Users(null,"Everton Cecato","everton@gmail.com");
 		repo.saveAll(Arrays.asList(eduarda,luiza,everton));
 		
-		Post post1 = new Post(null,sdf.parse("21/03/2018"),"Partiu viagem","Vou viajar para SC abraços",new AutorDto(luiza));
-		Post post2 = new Post(null,sdf.parse("21/03/2018"),"Partiu viagem","Vou viajar para o RJ abraços",new AutorDto(eduarda));
+		Post post1 = new Post(null,sdf.parse("21/02/2024"),"Partiu viagem","Vou viajar para SC abraços",new AutorDto(luiza));
+		Post post2 = new Post(null,sdf.parse("21/02/2024"),"Bom dia","Vou viajar para o RJ abraços",new AutorDto(eduarda));
 		;
 		
 		
